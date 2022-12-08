@@ -1,0 +1,22 @@
+spring:
+  server:
+    port: $PORT
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    server:
+      port: $PORT
+    url: jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_490998afa5d393f?createDatabaseIfNotExist=true
+    username: bbc77ae0f0165f
+    password: 1f97d6ae
+  jackson:
+    default-property-inclusion: non_null
+
+  flyway:
+    enabled: true
+    locations: classpath:/db/migration
